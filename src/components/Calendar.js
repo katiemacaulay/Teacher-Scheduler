@@ -91,7 +91,7 @@ class Calendar extends React.Component {
   onDateClick = day => {
     console.log(day)
     if(day.toString() === 'Wed Jan 09 2019 00:00:00 GMT-0600 (Central Standard Time)'){
-      console.log('yep, awesome')
+     console.log('here')
     } else {
       console.log('nope!')
     }
@@ -99,6 +99,8 @@ class Calendar extends React.Component {
       selectedDate: day
     });
   };
+
+
 
   nextMonth = () => {
     this.setState({
