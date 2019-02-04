@@ -229,3 +229,10 @@ main {
   flex-basis: calc(100%/7);
   width: calc(100%/7);
 }
+.selectedButton {
+  color: grey;
+  border-radius: 2px;
+  height: 5px;
+  width: 5px;
+  background: red;
+}

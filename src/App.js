@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar from "./components/Calendar";
+import ReactRouter from "./AppRouter"
 import "./App.css";
 
 class App extends React.Component {
@@ -7,15 +7,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <div id="logo">
-            <span className="icon">date_range</span>
-            <span>
-              react<b>calendar</b>
-            </span>
-          </div>
+          Specials Scheduler
         </header>
         <main>
-          <Calendar />
+          <ReactRouter/>
         </main>
       </div>
     );

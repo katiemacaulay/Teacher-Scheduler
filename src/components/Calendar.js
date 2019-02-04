@@ -5,6 +5,7 @@ class Calendar extends React.Component {
   state = {
     currentMonth: new Date(),
     selectedDate: new Date(),
+    schoolYearDays: ['Wed Jan 09 2019 00:00:00 GMT-0600 (Central Standard Time)'],
   };
 
   renderHeader() {
@@ -89,15 +90,15 @@ class Calendar extends React.Component {
   }
 
   onDateClick = day => {
-    console.log(day)
-    if(day.toString() === 'Wed Jan 09 2019 00:00:00 GMT-0600 (Central Standard Time)'){
-     console.log('here')
+    if(this.state.schoolYearDays.includes(day.toString())){
+      console.log('in school days')
     } else {
       console.log('nope!')
+      this.setState({
+        selectedDate: day,
+        schoolYearDays: [...this.state.schoolYearDays, day.toString()]
+      });
     }
-    this.setState({
-      selectedDate: day
-    });
   };
 
 
